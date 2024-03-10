@@ -1,0 +1,86 @@
+@import "../config";
+
+.listCard{
+    @extend .config;
+    .listCard__menu{
+        justify-content: center;
+        font-size: 21px;
+        color: black;
+        font-weight: 600;
+        
+        button{
+            transition: all 0.2s;
+            text-decoration: none;
+            outline: none;
+            &:active{
+                color: #fb4226;
+                transform: scale(1.1);
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .listCard__content{
+        width: 80vw;
+        max-width: $width-config;
+        margin: 0 auto;
+        .listCard__item{
+            overflow: visible;
+            padding: 0 5px;
+            margin-bottom: 15px;
+            position: relative;   
+            &:hover .overlay{
+                display: block;
+                animation: slideInOut .2s ease-out;
+            }
+        }  
+        .overlay{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom,#333,transparent);
+            border-radius: 8px;
+            cursor: pointer;
+            .btn{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                border-radius: 4px;
+                color: #fff;
+                background-color: $primary-color;
+                font-size: 20px;
+                padding: 10px;
+                text-align: center;
+                font-weight: 600;
+                transition: all .2s;
+                text-decoration: none;
+                outline: none;
+                &:hover{
+                    opacity: 0.9;
+                }
+            }
+            i{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 60px;
+                height: 60px;
+                font-size: 50px;
+                color: #ffffff9c;
+                transition:  all 0.2s;
+                &:hover{
+                    color: #ffffff72;
+
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,140 @@
+@import "../config";
+
+.header{
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .header__content{
+        padding: 0 24px;
+        position: relative;
+        width: 100%;
+        a{
+            .logo{
+                width: 130px;
+                object-fit: cover;
+                height: 100%;
+
+            }
+        }
+        ul{
+            font-weight: 600;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            li{
+                p{
+                    cursor: pointer;
+                    text-decoration: none;
+                    transition: all 0.3s;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+
+        }
+        .btn__content{
+            color: $text-color;
+            position: relative;
+            &::after{
+                content: "";
+                width: 1px;
+                height: 30px;
+                background-color: $border-color;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+            }
+            a{
+                transition: all 0.3s;
+                outline: none;
+                text-decoration: none;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        .btn__toggle{
+            display: none;
+            position: relative;
+            width: 72px;
+            height: 72px;
+            .btn__toggle-burger,.btn__toggle-close{
+                color: $primary-color;
+                position: absolute;
+                inset: 0;
+                width: max-content;
+                height: max-content;
+                outline: none;
+                animation: rotateAnimation .4s ;
+            }
+            .btn__toggle-close{
+                display: none;
+            }
+            
+        }
+    }
+    .nav__menu{
+        display: none;
+    }
+    
+
+    
+}
+
+@media only screen and (max-width: 1023px) { 
+    .header{
+        .header__content{
+            .btn__toggle{
+                display: block;
+            }
+        }
+        .nav__menu{
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 100%;
+            animation: slideInOut .2s ease-out;
+            height: 100vh;
+            .nav__list{
+                background-color: rgb(34, 34, 34);
+                height: 100%;
+                li{
+                    color: #fff;
+                    padding: 16px 20px;
+                    font-weight: 700;
+                    .nav__link{
+                        text-decoration: none;
+                        &:hover{
+                            color: #fff;    
+                        }
+                    }
+                    &:hover{
+                        background-color: #333;
+                    }
+                }
+            }
+        }
+        .nav__menu::-webkit-scrollbar{
+            width: 0;
+        }
+    
+    }
+    .slick-dots{
+        display: none !important;
+    }
+    .show__menu{       
+        display: block !important;
+    }
+    .show__icon-burger {
+            display: none !important;
+            transform: rotate(90deg);
+    }
+    .show__icon-close {
+            display: block !important;
+            transform: rotate(90deg);
+    }
+}

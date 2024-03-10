@@ -1,0 +1,113 @@
+@import "../config";
+
+footer{
+    background-color: #222222;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    .footer__content{
+        margin: auto;
+        max-width: 940px;
+        padding-bottom: 20px;
+        font-size: 12px;
+
+        .footer__policy{
+            color: #949494;
+            a{
+                display: block;
+                margin-bottom: 1rem;
+                &:hover{
+                    color: #949494;
+                }
+            }
+        }
+        .footer__partner{
+            .partner__content{
+                margin-top: 1rem;
+                a{
+                    display: inline-block;
+                    border-radius: 50%;
+                    width: 28px;
+                    height: 28px;
+                    overflow: hidden;
+                    background-color: white;
+                    margin-right: 12px;
+                    margin-bottom: 12px;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+        }
+        .footer__mobile{
+            text-align: center;
+            .mobile__content{
+                display: flex;
+                justify-content: space-evenly;
+                a{
+                    margin-top: 12px;
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+        }
+        .footer__social{
+            text-align: center;
+            .social__content{
+                display: flex;
+                justify-content: space-evenly;
+                a{
+                    margin-top: 12px;
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1023px) {
+    footer{
+        .footer__content{
+            .footer__mobile, .footer__social{
+                p{
+                    text-align: left;
+                }
+            }
+            .footer__mobile{
+                margin-bottom: 1rem;
+                .mobile__content{
+                    justify-content: flex-start;
+                    align-items: center;
+                    a{
+                        margin: 10px 1rem 10px 0;
+                    }
+                }
+            }
+            .footer__social{
+                .social__content{
+                    justify-content: flex-start;
+                    align-items: center;
+                    a{
+                        margin: 10px 1rem 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}

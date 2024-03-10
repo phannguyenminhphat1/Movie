@@ -1,0 +1,17 @@
+@import "../config";
+
+.demo-logo-vertical{
+    display: flex;
+    margin-bottom: 25px;
+    a{
+        display: block;
+        margin:  0 auto;
+        width: 80%;
+        img{
+            height: 64px;
+            width: 100%;
+            object-fit: cover;
+    
+        }
+    }
+}

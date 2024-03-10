@@ -1,0 +1,61 @@
+@import "../config";
+
+.account{
+    padding-top: 100px;
+    width: 100%;
+    .account__content{
+        .row{
+            .account__content-left{
+                .content__left-img{
+                    text-align: center;
+                    margin-bottom: 30px;
+                    padding: 25px;
+                    img{
+                        border-radius: 50% ;
+                        padding: 0.25rem;
+                        background-color: #fff;
+                        border: 1px solid #dee2e6;
+                        height: auto;
+                    }
+                    
+                }
+            }
+            .account__content-right{
+                color: black;
+                header{
+                    .content__right-header{
+                        display: flex;
+                        gap: 65px;
+                        button{
+                            font-weight: 600;
+                            transition: all 0.3s;
+                            outline: none;
+                            &:hover{
+                                scale: 1.1;
+                            }
+                            
+                        }
+                    }
+                }
+                .content__right-content{
+                    form{
+                        font-weight: 400;
+                        max-width: 500px;
+                        .form-group{
+                            margin-bottom: 10px;
+                        }
+                        .btnCapNhat{
+                            margin-top: 20px;
+                        }
+                    }
+                    .table-responsive{
+                        display: block;
+                        width: 100%;
+                        overflow-x: auto;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

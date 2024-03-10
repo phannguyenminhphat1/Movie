@@ -1,0 +1,6 @@
+export const GET_MOVIE = "GET_MOVIE";
+export const PHIM_DANG_CHIEU = "PHIM_DANG_CHIEU";
+export const PHIM_SAP_CHIEU = "PHIM_SAP_CHIEU";
+export const GET_MOVIE_SYSTEM = "GET_MOVIE_SYSTEM";
+export const GET_MOVIE_SHOWTIME_DETAIL = "GET_MOVIE_SHOWTIME_DETAIL";
+export const GET_BANNER = "GET_BANNER";
