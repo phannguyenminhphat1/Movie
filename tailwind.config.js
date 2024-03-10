@@ -192,7 +192,13 @@ module.exports = {
       "6xl": "72rem",
       "7xl": "80rem",
     },
-    container: {},
+    container: {
+      sm: "540px",
+      md: "720px",
+      lg: "960px",
+      xl: "1140px",
+      xxl: "1320px",
+    },
     content: {
       none: "none",
     },

@@ -1,0 +1,81 @@
+@import "../config";
+.complex{
+    @extend .config;
+    h4{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $primary-color;
+        text-transform: uppercase;
+    }
+    .complex__content {         
+        .complex__navs {
+            margin-bottom: 25px;
+            display: flex;
+            max-height: 400px;
+            overflow-y: auto;
+            justify-content: center;
+            align-items: center;
+            ul{
+                text-align: center;
+                .nav-item {
+                margin: 1rem;
+                    .nav-link {
+                    outline: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    text-align: center;
+                    overflow: hidden;
+                    background-color: white;
+                        img{
+                            width: 100px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                }
+            }
+        } 
+        }
+        .complex__show{
+            .complex__show-content{
+                display: flex;
+                margin: 0 auto;
+                max-height: 400px;
+                max-width: $width-config;
+                overflow-y: hidden;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                border-radius: 10px;
+                .ant-tabs-nav{
+                    width: 440px;
+                    position: sticky;
+                    top: 0;
+                }
+                .ant-tabs{
+                    position: relative;
+                    max-height: 100%;
+                    overflow-y: auto;
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+}
+@media only screen and (max-width: 1023px){
+        .complex__content {         
+            .complex__navs {
+                ul{
+                    .nav-item {
+                        .nav-link {
+                            width: 75px !important;
+                            height: 75px !important;   
+                        }
+                    }
+                } 
+            }     
+    }
+ }

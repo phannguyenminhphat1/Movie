@@ -1,0 +1,85 @@
+// BASE
+@import "./base";
+
+// HEADER
+@import "./components/header";
+
+// CAROUSEL
+@import "./components/carousel";
+
+// LIST CARD
+@import "./components/listCard";
+
+// COMPLEX
+@import "./components/complex";
+
+// DETAIL
+@import "./components/detail";
+
+// LOGIN
+@import "./components/login";
+
+// REGISTER
+@import "./components/register";
+
+// ACCOUNT
+@import "./components/account";
+
+// FOOTER
+@import "./components/footer";
+
+// TICKEt
+@import "./components/ticket";
+
+
+
+// ADMIN
+@import "./components/admin";
+
+@keyframes slideInOut {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotateAnimation {
+  from {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+// ACTIVE
+.activeBtn{
+    color: $primary-color;
+    transform: scale(1.2);
+    outline: none;
+}
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.errors{
+    margin-top: 5px;
+    color: red;
+}
+
+
+// AUTH
+.bg__glass{
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+    filter: blur(2pxx);
+    -webkit-filter: blur(2pxx);
+}
+
